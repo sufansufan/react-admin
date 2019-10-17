@@ -1,0 +1,11 @@
+{
+  "presets": ["react-app", "@babel/env"],
+  "plugins": [
+    [
+      "import", {
+        "libraryName": "antd",
+        "style": "css"
+      }
+    ]
+  ]
+}
