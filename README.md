@@ -12,6 +12,10 @@ cd react-admin
 ~~~
 yarn start
 ~~~
+暴露配置文件
+~~~
+yarn eject
+~~~
 
 ### 项目结构
 ~~~
@@ -35,29 +39,18 @@ yarn start
 ## Ant Design of React 的使用
 ~~~
 yarn add antd
-yarn add react-app-rewired customize-cra
 ~~~
-**package.json**
+
+**修改.babelrc**
 ~~~
-"scripts": {
--   "start": "react-scripts start",
-+   "start": "react-app-rewired start",
--   "build": "react-scripts build",
-+   "build": "react-app-rewired build",
--   "test": "react-scripts test",
-+   "test": "react-app-rewired test",
-}
-~~~
-**config-overrides.js(根目录上面创建)**
-~~~
-yarn add babel-plugin-import
-module.exports = override(
-  fixBabelImports('import', {
-    libraryName: 'antd',
-    libraryDirectory: 'es',
-    style: 'css',
-  }),
-);
+"plugins": [
+  [
+    "import", {
+      "libraryName": "antd",
+      "style": "css"
+    }
+  ]
+]
 ~~~
 
 ## eslint使用
@@ -77,8 +70,11 @@ redux-immutable => store/reducer.js
 ~~~
 yarn add react-router react-router-dom react-router-config --save
 ~~~
+
 **react-router-config**
+
 react-router-config源码就是一个高阶函数，利用map函数生成静态路由
+
 ~~~
 import React from "react";
 import Switch from "react-router/Switch";
@@ -105,12 +101,12 @@ const renderRoutes = (routes, extraProps = {}, switchProps = {}) => routes ? (
 
 **import' and 'export' may appear only with 'sourceType: module**
 ~~~
-yarn add babel-preset-stage-0 -D
-yarn add babel-preset-env -D
+yarn add @babel/preset-stage-0 -D
+yarn add @babel/preset-env -D
 ~~~
 配置.babelrc
 ~~~
- "presets": ["env", "react-app", "stage-0"]
+  "presets": ["react-app", "@babel/env"],
 ~~~
 
 **删除package.json中的babel**
