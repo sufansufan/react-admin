@@ -26,6 +26,7 @@ export const GlobalStyle = createGlobalStyle`
 	}
 	html, body{
 		background: #fff;
+		font-family: Helvetica,Arial,"Hiragino Sans GB","Microsoft Yahei","微软雅黑",STHeiti,"华文细黑",sans-serif;
 	}
 	ol, ul {
 		list-style: none;

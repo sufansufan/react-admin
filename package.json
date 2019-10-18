@@ -1,5 +1,5 @@
 {
-  "name": "react-demo",
+  "name": "react-admin",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,7 +7,7 @@
     "@svgr/webpack": "4.3.2",
     "@typescript-eslint/eslint-plugin": "^2.2.0",
     "@typescript-eslint/parser": "^2.2.0",
-    "antd": "^3.24.0",
+    "antd": "^3.24.1",
     "babel-eslint": "10.0.3",
     "babel-jest": "^24.9.0",
     "babel-loader": "8.0.6",
@@ -44,6 +44,7 @@
     "postcss-normalize": "7.0.1",
     "postcss-preset-env": "6.7.0",
     "postcss-safe-parser": "4.0.1",
+    "rc-form-hooks": "^0.0.1-alpha.22",
     "react": "^16.10.2",
     "react-app-polyfill": "^1.0.4",
     "react-dev-utils": "^9.1.0",
@@ -136,9 +137,5 @@
       "jest-watch-typeahead/filename",
       "jest-watch-typeahead/testname"
     ]
-  },
-  "devDependencies": {
-    "@babel/preset-env": "^7.6.3",
-    "@babel/preset-stage-0": "^7.0.0"
   }
 }

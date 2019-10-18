@@ -792,7 +792,7 @@
     js-levenshtein "^1.1.3"
     semver "^5.5.0"
 
-"@babel/preset-env@^7.4.5", "@babel/preset-env@^7.6.3":
+"@babel/preset-env@^7.4.5":
   version "7.6.3"
   resolved "https://registry.npm.taobao.org/@babel/preset-env/download/@babel/preset-env-7.6.3.tgz#9e1bf05a2e2d687036d24c40e4639dc46cef2271"
   integrity sha1-nhvwWi4taHA20kxA5GOdxGzvInE=
@@ -869,11 +869,6 @@
     "@babel/plugin-transform-react-jsx" "^7.0.0"
     "@babel/plugin-transform-react-jsx-self" "^7.0.0"
     "@babel/plugin-transform-react-jsx-source" "^7.0.0"
-
-"@babel/preset-stage-0@^7.0.0":
-  version "7.0.0"
-  resolved "https://registry.npm.taobao.org/@babel/preset-stage-0/download/@babel/preset-stage-0-7.0.0.tgz#999aaec79ee8f0a763042c68c06539c97c6e0646"
-  integrity sha1-mZqux57o8KdjBCxowGU5yXxuBkY=
 
 "@babel/preset-typescript@7.6.0":
   version "7.6.0"
@@ -976,9 +971,9 @@
   integrity sha1-CnCVreoGckPOMoPhtWuKj0U7JCo=
 
 "@hapi/hoek@8.x.x", "@hapi/hoek@^8.3.0":
-  version "8.3.1"
-  resolved "https://registry.npm.taobao.org/@hapi/hoek/download/@hapi/hoek-8.3.1.tgz?cache=0&sync_timestamp=1571120870748&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40hapi%2Fhoek%2Fdownload%2F%40hapi%2Fhoek-8.3.1.tgz#227d29efdb158e4a64590224add90c820f94d20e"
-  integrity sha1-In0p79sVjkpkWQIkrdkMgg+U0g4=
+  version "8.3.2"
+  resolved "https://registry.npm.taobao.org/@hapi/hoek/download/@hapi/hoek-8.3.2.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40hapi%2Fhoek%2Fdownload%2F%40hapi%2Fhoek-8.3.2.tgz#91e7188edebc5d876f0b91a860f555ff06f0782b"
+  integrity sha1-kecYjt68XYdvC5GoYPVV/wbweCs=
 
 "@hapi/joi@^15.0.0":
   version "15.1.1"
@@ -1711,10 +1706,10 @@ ansi-styles@^3.2.0, ansi-styles@^3.2.1:
   dependencies:
     color-convert "^1.9.0"
 
-antd@^3.24.0:
-  version "3.24.0"
-  resolved "https://registry.npm.taobao.org/antd/download/antd-3.24.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fantd%2Fdownload%2Fantd-3.24.0.tgz#a78d442c0640f7b4521d9a634a85da06e9169f39"
-  integrity sha1-p41ELAZA97RSHZpjSoXaBukWnzk=
+antd@^3.24.1:
+  version "3.24.1"
+  resolved "https://registry.npm.taobao.org/antd/download/antd-3.24.1.tgz?cache=0&sync_timestamp=1571316740975&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fantd%2Fdownload%2Fantd-3.24.1.tgz#20f2ae5dc6b38de8a60a7843b7b4f2e4ba548fc3"
+  integrity sha1-IPKuXcazjeimCnhDt7Ty5LpUj8M=
   dependencies:
     "@ant-design/create-react-context" "^0.2.4"
     "@ant-design/icons" "~2.1.1"
@@ -1949,6 +1944,11 @@ async-limiter@~1.0.0:
   version "1.0.1"
   resolved "https://registry.npm.taobao.org/async-limiter/download/async-limiter-1.0.1.tgz#dd379e94f0db8310b08291f9d64c3209766617fd"
   integrity sha1-3TeelPDbgxCwgpH51kwyCXZmF/0=
+
+async-validator@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.npm.taobao.org/async-validator/download/async-validator-2.0.1.tgz#2ab03b1062b5bc727de9229aeeba4dc43f36de24"
+  integrity sha1-KrA7EGK1vHJ96SKa7rpNxD823iQ=
 
 async-validator@~1.11.3:
   version "1.11.5"
@@ -2375,14 +2375,23 @@ browserify-zlib@^0.2.0:
   dependencies:
     pako "~1.0.5"
 
-browserslist@4.7.0, browserslist@^4.0.0, browserslist@^4.1.1, browserslist@^4.6.0, browserslist@^4.6.4, browserslist@^4.7.0:
+browserslist@4.7.0:
   version "4.7.0"
-  resolved "https://registry.npm.taobao.org/browserslist/download/browserslist-4.7.0.tgz?cache=0&sync_timestamp=1567246049576&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fbrowserslist%2Fdownload%2Fbrowserslist-4.7.0.tgz#9ee89225ffc07db03409f2fee524dc8227458a17"
+  resolved "https://registry.npm.taobao.org/browserslist/download/browserslist-4.7.0.tgz?cache=0&sync_timestamp=1571317587300&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fbrowserslist%2Fdownload%2Fbrowserslist-4.7.0.tgz#9ee89225ffc07db03409f2fee524dc8227458a17"
   integrity sha1-nuiSJf/AfbA0CfL+5STcgidFihc=
   dependencies:
     caniuse-lite "^1.0.30000989"
     electron-to-chromium "^1.3.247"
     node-releases "^1.1.29"
+
+browserslist@^4.0.0, browserslist@^4.1.1, browserslist@^4.6.0, browserslist@^4.6.4, browserslist@^4.7.0:
+  version "4.7.1"
+  resolved "https://registry.npm.taobao.org/browserslist/download/browserslist-4.7.1.tgz?cache=0&sync_timestamp=1571317587300&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fbrowserslist%2Fdownload%2Fbrowserslist-4.7.1.tgz#bd400d1aea56538580e8c4d5f1c54ac11b5ab468"
+  integrity sha1-vUANGupWU4WA6MTV8cVKwRtatGg=
+  dependencies:
+    caniuse-lite "^1.0.30000999"
+    electron-to-chromium "^1.3.284"
+    node-releases "^1.1.36"
 
 bser@^2.0.0:
   version "2.1.0"
@@ -3704,10 +3713,10 @@ ee-first@1.1.1:
   resolved "https://registry.npm.taobao.org/ee-first/download/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
-electron-to-chromium@^1.3.247:
-  version "1.3.284"
-  resolved "https://registry.npm.taobao.org/electron-to-chromium/download/electron-to-chromium-1.3.284.tgz#b24359fa4f49b3a7c52afc005d59ec3aa9f6796e"
-  integrity sha1-skNZ+k9Js6fFKvwAXVnsOqn2eW4=
+electron-to-chromium@^1.3.247, electron-to-chromium@^1.3.284:
+  version "1.3.285"
+  resolved "https://registry.npm.taobao.org/electron-to-chromium/download/electron-to-chromium-1.3.285.tgz?cache=0&sync_timestamp=1571342582692&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Felectron-to-chromium%2Fdownload%2Felectron-to-chromium-1.3.285.tgz#909576db2ee4dfec74a87aa30c92f66ebfc78748"
+  integrity sha1-kJV22y7k3+x0qHqjDJL2br/Hh0g=
 
 elliptic@^6.0.0:
   version "6.5.1"
@@ -6953,7 +6962,7 @@ node-pre-gyp@^0.12.0:
     semver "^5.3.0"
     tar "^4"
 
-node-releases@^1.1.29:
+node-releases@^1.1.29, node-releases@^1.1.36:
   version "1.1.36"
   resolved "https://registry.npm.taobao.org/node-releases/download/node-releases-1.1.36.tgz?cache=0&sync_timestamp=1571224297469&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fnode-releases%2Fdownload%2Fnode-releases-1.1.36.tgz#44b7cb8254138e87bdbfa47761d0f825e20900b4"
   integrity sha1-RLfLglQTjoe9v6R3YdD4JeIJALQ=
@@ -8590,9 +8599,9 @@ rc-collapse@~1.11.3:
     shallowequal "^1.1.0"
 
 rc-dialog@~7.5.2:
-  version "7.5.7"
-  resolved "https://registry.npm.taobao.org/rc-dialog/download/rc-dialog-7.5.7.tgz#1f47b24bffab2bf878be33316b28a617b8a4747a"
-  integrity sha1-H0eyS/+rK/h4vjMxayimF7ikdHo=
+  version "7.5.9"
+  resolved "https://registry.npm.taobao.org/rc-dialog/download/rc-dialog-7.5.9.tgz#ece12211f49c4fe859aab830b08ef4ea0e40edff"
+  integrity sha1-7OEiEfScT+hZqrgwsI706g5A7f8=
   dependencies:
     babel-runtime "6.x"
     rc-animate "2.x"
@@ -8646,6 +8655,13 @@ rc-editor-mention@^1.1.13:
     rc-animate "^2.3.0"
     rc-editor-core "~0.8.3"
 
+rc-form-hooks@^0.0.1-alpha.22:
+  version "0.0.1-alpha.22"
+  resolved "https://registry.npm.taobao.org/rc-form-hooks/download/rc-form-hooks-0.0.1-alpha.22.tgz#0853893afcb0e1d8d6670fe3c52ac1ca2cf18d0b"
+  integrity sha1-CFOJOvyw4djWZw/jxSrByizxjQs=
+  dependencies:
+    async-validator "^2.0.1"
+
 rc-form@^2.4.5:
   version "2.4.9"
   resolved "https://registry.npm.taobao.org/rc-form/download/rc-form-2.4.9.tgz?cache=0&sync_timestamp=1569564339641&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Frc-form%2Fdownload%2Frc-form-2.4.9.tgz#6884b06bbd8d6a934e5f2aa27e8730882c70840c"
@@ -8693,7 +8709,7 @@ rc-mentions@~0.4.0:
 
 rc-menu@^7.3.0, rc-menu@^7.4.22, rc-menu@~7.5.1:
   version "7.5.2"
-  resolved "https://registry.npm.taobao.org/rc-menu/download/rc-menu-7.5.2.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Frc-menu%2Fdownload%2Frc-menu-7.5.2.tgz#458efcadba41d33cfd53127de0f334977bb5cf38"
+  resolved "https://registry.npm.taobao.org/rc-menu/download/rc-menu-7.5.2.tgz#458efcadba41d33cfd53127de0f334977bb5cf38"
   integrity sha1-RY78rbpB0zz9UxJ94PM0l3u1zzg=
   dependencies:
     classnames "2.x"

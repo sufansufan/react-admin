@@ -65,11 +65,24 @@ react-redux => App.js
 redux-immutable => store/reducer.js
 ~~~
 
+### immutable
+
+Immutable Data 就是一旦创建，就不能再被更改的数据。对 Immutable 对象的任何修改或添加删除操作都会返回一个新的 Immutable 对象。Immutable 实现的原理是 Persistent Data Structure（持久化数据结构），也就是使用旧数据创建新数据时，要保证旧数据同时可用且不变。同时为了避免 deepCopy 把所有节点都复制一遍带来的性能损耗，Immutable 使用了 Structural Sharing（结构共享），即如果对象树中一个节点发生变化，只修改这个节点和受它影响的父节点，其它节点则进行共享
+
+[详细文档阅读](https://segmentfault.com/a/1190000010676878) [文档Api](https://www.cnblogs.com/samwu/p/5457031.html)
+
+
 ## 路由配置
 ### 依赖配置
 ~~~
 yarn add react-router react-router-dom react-router-config --save
 ~~~
+
+### Suspense
+
+在 16.6 版本之前，code-spliting 通常是由第三方库来完成的，比如 react-loadble(核心思路为: 高阶组件 + webpack dynamic import), 在 16.6 版本中提供了 Suspense 和 lazy 这两个钩子, 因此在之后的版本中便可以使用其来实现 Code Spliting。
+
+> 目前阶段, 服务端渲染中的 code-spliting 还是得使用 react-loadable
 
 **react-router-config**
 
@@ -96,6 +109,10 @@ const renderRoutes = (routes, extraProps = {}, switchProps = {}) => routes ? (
   ) : null;
  export default renderRoutes;
 ~~~
+
+### HashRouter
+
+[文档阅读](https://juejin.im/post/5ac6f4a7f265da237314b08c)
 
 ## 填坑
 

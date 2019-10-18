@@ -1,16 +1,18 @@
 import React from 'react';
 import { Provider } from 'react-redux'
-import { GlobalStyle } from './style'
 import store from './store/index';
-import { Button } from 'antd'
+import { GlobalStyle } from './style'
+import { HashRouter } from "react-router-dom";
+import { renderRoutes } from "react-router-config";
+import routes from "./routes/index";
+
 function App() {
   return (
     <Provider store={store}>
-      <div className="App">
+      <HashRouter>
         <GlobalStyle></GlobalStyle>
-        <Button>111</Button>
-        2222
-      </div>
+        {renderRoutes(routes)}
+      </HashRouter>
     </Provider>
   );
 }
