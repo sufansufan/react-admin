@@ -78,8 +78,13 @@ Immutable Data 就是一旦创建，就不能再被更改的数据。对 Immutab
 yarn add react-router react-router-dom react-router-config --save
 ~~~
 
-### Suspense
+**react-router-dom**
 
+- withRouter
+高阶组件中的withRouter, 作用是将一个组件包裹进Route里面, 然后react-router的三个对象history, location, match就会被放进这个组件的props属性中。
+所以withRouter的作用就是, 如果我们某个东西不是一个Router, 但是我们要依靠它去跳转一个页面, 比如点击页面的logo, 返回首页, 这时候就可以使用withRouter来做.
+
+### Suspense
 在 16.6 版本之前，code-spliting 通常是由第三方库来完成的，比如 react-loadble(核心思路为: 高阶组件 + webpack dynamic import), 在 16.6 版本中提供了 Suspense 和 lazy 这两个钩子, 因此在之后的版本中便可以使用其来实现 Code Spliting。
 
 > 目前阶段, 服务端渲染中的 code-spliting 还是得使用 react-loadable
@@ -132,3 +137,10 @@ yarn add @babel/preset-env -D
   presets: ['react-app']
 }
 ~~~
+
+## 欠缺
+
+- react hooks各种定义
+- router(react-router-dom) api阅读
+- immutable api 多看几遍
+- 动画库的掌握

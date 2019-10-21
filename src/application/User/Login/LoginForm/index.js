@@ -24,13 +24,14 @@ const LoginFrom = props => {
           )}
         </Form.Item>
         <Form.Item>
-          {getFieldDecorator('username', {
+          {getFieldDecorator('password', {
             rules: [{ required: true, message: 'Please input your username!' }],
           })(
             <Input
               size="large"
-              prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
+              prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
               placeholder="请输入密码"
+              type="password"
             />,
           )}
         </Form.Item>
