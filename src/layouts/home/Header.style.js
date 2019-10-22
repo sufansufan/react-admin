@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import style from '../../assets/globalStyle';
+// import style from '../../assets/globalStyle';
 
 export const Container = styled.div`
   display: flex;
@@ -8,5 +8,4 @@ export const Container = styled.div`
   div:first-child {
     font-size: 16px;
   }
-
 `;

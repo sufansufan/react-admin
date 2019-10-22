@@ -1,19 +1,35 @@
-import React, { memo } from 'react';
+import React, { memo, useCallback } from 'react';
+import { withRouter } from "react-router-dom";
 import useForm from "rc-form-hooks";
 import { Form, Icon, Input, Button} from 'antd';
 import { FromBox } from "./style";
 
 const LoginFrom = props => {
+  const { loginByName } = props
   const { getFieldDecorator,  validateFields, values } = useForm();
+  const triggerLogin = useCallback(() => {
+    loginByName({
+      loginType: 1,
+      ...values
+    }).then(res => {
+      props.history.push('/')
+    })
+  }, [loginByName, values])
+
   const handleSubmit = e => {
     e.preventDefault();
-    validateFields().then(console.log(values)).catch(e => console.error(e.message));
+    validateFields().then(() => {
+        triggerLogin()
+      }
+    ).catch(e =>
+      console.error(e.message)
+    );
   }
   return (
     <FromBox>
       <Form onSubmit={handleSubmit} className="login-form">
         <Form.Item>
-          {getFieldDecorator('username', {
+          {getFieldDecorator('account', {
             rules: [{ required: true, message: 'Please input your username!' }],
           })(
             <Input
@@ -45,4 +61,4 @@ const LoginFrom = props => {
   )
 }
 
-export default memo(LoginFrom)
+export default memo(withRouter(LoginFrom))

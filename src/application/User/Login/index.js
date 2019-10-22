@@ -1,9 +1,12 @@
 
-import React, { useEffect }from 'react';
+import React, { useEffect, memo }from 'react';
 import { Container, Box } from "./style";
+import { connect } from "react-redux";
 import LoginFrom from "./LoginForm/index";
-const Login = props => {
+import { login } from "./store/actionCreators"
 
+const Login = props => {
+  const { loginDispatch } = props
   useEffect(() => {
     console.log(props)
   })
@@ -15,10 +18,24 @@ const Login = props => {
           <h2>海思医疗</h2>
           <h3>Business Management System</h3>
         </div>
-        <LoginFrom />
+        <LoginFrom loginByName={loginDispatch}/>
       </Box>
     </Container>
   )
 }
 
-export default Login
+const mapStateToProps = state => ({
+
+})
+
+const mapDispatchToProps = dispatch => {
+  return {
+    loginDispatch(data) {
+      return new Promise((resolve, reject) => {
+        dispatch(login(data))
+        resolve(111)
+      });
+    }
+  }
+}
+export default connect(mapStateToProps,mapDispatchToProps)(memo(Login));
