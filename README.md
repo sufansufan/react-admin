@@ -138,11 +138,3 @@ yarn add @babel/preset-env -D
 }
 ~~~
 
-## 欠缺
-
-- react hooks各种定义
-- router(react-router-dom) api阅读
-- immutable api 多看几遍
-- 动画库的掌握
-- store同步和异步
-- useCallback, useMemo, useEffect
