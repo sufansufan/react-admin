@@ -1,5 +1,5 @@
-import { GET_TOKEN, SET_TOKEN, SET_USERINFO, REMOVE_TOKEN } from "./contants";
-import { loginByUsername } from '../../../../api/user'
+import { SET_MENU, SET_TOKEN, SET_USERINFO } from "./contants";
+import { loginByUsername, getMenu } from '../../../../api/user/index'
 import { fromJS } from "immutable";
 import { setStorage } from "../../../../util/store"
 
@@ -13,6 +13,12 @@ export const setUserInfo = (data) => ({
   data: fromJS(data)
 })
 
+export const setMenu = (data) => ({
+  type: SET_MENU,
+  data: fromJS(data)
+})
+
+
 export const login = (data) => {
   return dispatch => {
     loginByUsername(data).then(({data}) => {
@@ -24,10 +30,20 @@ export const login = (data) => {
       }
       setStorage(params)
       setStorage({...params, type: 'session'})
+      setStorage({name: 'userInfo', content:loginInfo, type: 'local'})
+      setStorage({name: 'breadcrumb', content: [], type: 'session'})
       dispatch(setToken(loginInfo.accessToken))
       dispatch(setUserInfo(loginInfo))
     }).catch(() => {
       console.log("登录失败！");
+    })
+  }
+}
+
+export const queryMenu = () => {
+  return dispatch => {
+    getMenu().then(({data}) => {
+      dispatch(setMenu(data.data))
     })
   }
 }

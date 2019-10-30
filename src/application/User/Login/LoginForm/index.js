@@ -14,7 +14,7 @@ const LoginFrom = props => {
     }).then(res => {
       props.history.push('/')
     })
-  }, [loginByName, values])
+  }, [loginByName, values, props.history])
 
   const handleSubmit = e => {
     e.preventDefault();

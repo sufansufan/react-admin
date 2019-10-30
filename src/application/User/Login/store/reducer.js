@@ -3,7 +3,8 @@ import { fromJS } from 'immutable';
 
 const defaultState = fromJS({
   token: '',
-  userInfo: []
+  userInfo: [],
+  menuList: []
 })
 
 export default (state = defaultState, action) => {
@@ -12,6 +13,8 @@ export default (state = defaultState, action) => {
       return state.set("token", action.data)
     case actionTypes.SET_USERINFO:
       return state.set("userInfo", action.data)
+    case actionTypes.SET_MENU:
+        return state.set("menuList", action.data)
     default:
       return state;
   }

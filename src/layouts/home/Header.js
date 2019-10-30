@@ -1,17 +1,12 @@
 import React from "react";
 import { Container } from "./Header.style";
-import { Icon, Breadcrumb } from 'antd';
+import { Icon } from 'antd';
 
 const Header = (props) => {
   return (
     <Container>
       <div>
-        <Breadcrumb separator=">">
-          <Breadcrumb.Item>Home</Breadcrumb.Item>
-          <Breadcrumb.Item href="">Application Center</Breadcrumb.Item>
-          <Breadcrumb.Item href="">Application List</Breadcrumb.Item>
-          <Breadcrumb.Item>An Application</Breadcrumb.Item>
-        </Breadcrumb>
+        海思医疗管理系统
       </div>
       <div>
         <Icon type="poweroff" />

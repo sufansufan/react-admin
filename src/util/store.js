@@ -15,7 +15,7 @@ export const setStorage = (params = {}) => {
   } else if(type === 'local') {
     window.localStorage.setItem(name, JSON.stringify(store));
   } else if(type === 'cookies') {
-    Cookies.set(TokenKey, 'token', { expires: inFifteenMinutes })
+    Cookies.set(TokenKey, content, { expires: inFifteenMinutes })
   } else {
     console.log('存储出现问题')
   }

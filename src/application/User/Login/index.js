@@ -33,7 +33,7 @@ const mapDispatchToProps = dispatch => {
     loginDispatch(data) {
       return new Promise((resolve, reject) => {
         dispatch(login(data))
-        resolve(111)
+        resolve()
       });
     }
   }

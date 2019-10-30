@@ -3,7 +3,9 @@ import { getStorage } from "../util/store"
 
 //  获取token
 const token = getStorage({ name: 'token', type: 'session' })
-const baseUrl = 'http://192.168.1.136:28008';
+// const baseUrl = 'http://192.168.1.165:28008';
+const baseUrl = 'http://139.196.104.14:28008';
+
 
 // axios实例化
 const axiosInstance = axios.create({
@@ -36,14 +38,14 @@ axiosInstance.interceptors.request.use(config => {
 axiosInstance.interceptors.response.use(res => {
   const status = res.data.code || 200
   // const statusWhiteList = website.statusWhiteList || [];
-  const message = res.data.msg || '未知错误';
+  // const message = res.data.msg || '未知错误';
   //如果在白名单里则自行catch逻辑处理
   // if (statusWhiteList.includes(status)) return Promise.reject(res);
   //如果是401则跳转到登录页面
   // if (status === 401) store.dispatch('FedLogOut').then(() => router.push({path: '/login'}));
   // 如果请求为非200否者默认统一处理
   if (status !== 200) {
-    return Promise.reject(new Error(message))
+    return Promise.reject(new Error('登录错误'))
   }
   return res;
 }, error => {

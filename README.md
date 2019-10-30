@@ -104,7 +104,6 @@ const renderRoutes = (routes, extraProps = {}, switchProps = {}) => routes ? (
           key={route.key || i}
           path={route.path}
           exact={route.exact}
-          strict={route.strict}
           render={props => (
             <route.component {...props} {...extraProps} route={route} />
           )}
@@ -138,3 +137,23 @@ yarn add @babel/preset-env -D
 }
 ~~~
 
+## 欠缺
+
+- react hooks各种定义
+- router(react-router-dom) api阅读
+- immutable api 多看几遍
+- 动画库的掌握
+- store同步和异步
+- useCallback, useMemo, useEffect 的区别
+
+**useCallback, useMemo, useEffect 的区别**
+useCallback和useMemo的参数跟useEffect一致，他们之间最大的区别有是useEffect会用于处理副作用，而前两个hooks不能。
+useMemo和useCallback都会在组件第一次渲染的时候执行，之后会在其依赖的变量发生改变时再次执行；并且这两个hooks都返回缓存的值，useMemo返回缓存的变量，useCallback返回缓存的函数。
+
+**useMemo**
+使用useMemo方法避免无用的调用，
+
+**useCallback**
+使用场景是：有一个父组件，其中包含子组件，子组件接收一个函数作为props；通常而言，如果父组件更新了，子组件也会执行更新；但是大多数场景下，更新是没有必要的，我们可以借助useCallback来返回函数，然后把这个函数作为props传递给子组件；这样，子组件就能避免不必要的更新。
+
+## 重点关注权限验证

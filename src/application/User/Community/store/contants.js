@@ -1,0 +1,1 @@
+export const SET_COMMUNITY_LIST = 'SET_COMMUNITY_LIST';
