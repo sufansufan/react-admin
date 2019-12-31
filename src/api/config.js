@@ -4,7 +4,7 @@ import { getStorage } from "../util/store"
 //  获取token
 const token = getStorage({ name: 'token', type: 'session' })
 // const baseUrl = 'http://192.168.1.165:28008';
-const baseUrl = 'http://139.196.104.14:28008';
+const baseUrl = 'http://119.3.44.21:31135';
 
 
 // axios实例化
